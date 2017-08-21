@@ -1,0 +1,36 @@
+syntax = "proto3";
+
+option java_package = "com.unsafe.gameserver.protocol";
+option java_outer_classname = "GameProto";
+//SPEED CODE_SIZE LITE_RUNTIME
+option optimize_for = SPEED;
+
+message TestMessageChild {
+    int32 code = 1;
+    string name = 2;
+    bool checked = 3;
+}
+enum MyEnumTestMessage {
+    ENUM_A = 0;
+    ENUM_B = 1;
+    ENUM_C = 2;
+}
+message TestMessage {
+    double var1 = 1; //double
+    float var2 = 2; //float
+    int32 var3 = 3; //int
+    uint32 var4 = 4; //int
+    uint64 var5 = 5; //long
+    sint32 var6 = 6; //int
+    sint64 var7 = 7; //long
+    fixed32 var8 = 8; //int
+    fixed64 var9 = 9; //long
+    sfixed32 var10 = 10; //int
+    sfixed64 var11 = 11; //long
+    bool var12 = 12; //boolean
+    string var13 = 13; //string
+    bytes var14 = 14; //bytestring
+
+    TestMessageChild var15 = 15;
+    MyEnumTestMessage var16 = 16;
+}

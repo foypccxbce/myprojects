@@ -1,0 +1,17 @@
+unsafe:
+    gs:
+      enabled: true
+      gamePort: 45000
+spring:
+  profiles:
+    active: dev
+  datasource:
+    url: jdbc:mysql://127.0.0.1:3306/caframe
+    username: root
+    password: 123456
+    hikari:
+      maximum-pool-size: 10
+logging:
+  level.io.netty: debug
+  level.com.unsafe: debug
+  file: logs/game.log
